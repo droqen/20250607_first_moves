@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Sheet" load_steps=3 format=3 uid="uid://db2xtgul1pcdh"]
+
+[ext_resource type="Script" uid="uid://byun6mt7c4fun" path="res://navdi/navdisheet.gd" id="1_c5gen"]
+[ext_resource type="Texture2D" uid="uid://cob5nugc21n6a" path="res://pomes/00-production/00-production.png" id="2_mcr4p"]
+
+[resource]
+script = ExtResource("1_c5gen")
+texture = ExtResource("2_mcr4p")
+hframes = 10
+vframes = 10
+defaultframe = 0
+metadata/_custom_type_script = "uid://byun6mt7c4fun"
