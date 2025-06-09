@@ -1,24 +1,19 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c1rsw40p8p6v"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://b3syjap17s5us"]
 
-[ext_resource type="Texture2D" uid="uid://cob5nugc21n6a" path="res://pomes/00-production/00-production.png" id="1_jc7ty"]
+[ext_resource type="Texture2D" uid="uid://den48k7gyogiy" path="res://pomes/01-the-first-death/01-the-first-death.png" id="1_5vs5i"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_enlwc"]
-texture = ExtResource("1_jc7ty")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_17muw"]
+texture = ExtResource("1_5vs5i")
 texture_region_size = Vector2i(10, 10)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -5, 5, -5, 5, 5, -5, 5)
 3:0/0 = 0
 4:0/0 = 0
 5:0/0 = 0
-5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -5, 5, -5, 5, 5, -5, 5)
 6:0/0 = 0
-6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -5, 5, -5, 5, 5, -5, 5)
 7:0/0 = 0
-7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -5, 5, -5, 5, 5, -5, 5)
 8:0/0 = 0
-8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -5, 5, -5, 5, 5, -5, 5)
 9:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
@@ -114,4 +109,4 @@ texture_region_size = Vector2i(10, 10)
 [resource]
 tile_size = Vector2i(10, 10)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_enlwc")
+sources/0 = SubResource("TileSetAtlasSource_17muw")

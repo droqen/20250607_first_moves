@@ -1,24 +1,19 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c1rsw40p8p6v"]
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://gac4vmkgwp3r"]
 
-[ext_resource type="Texture2D" uid="uid://cob5nugc21n6a" path="res://pomes/00-production/00-production.png" id="1_jc7ty"]
+[ext_resource type="Texture2D" uid="uid://ck0ahtsbt2kep" path="res://pomes/02-eyeservant/eyeservant.png" id="1_nio2t"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_enlwc"]
-texture = ExtResource("1_jc7ty")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_503ai"]
+texture = ExtResource("1_nio2t")
 texture_region_size = Vector2i(10, 10)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
-2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -5, 5, -5, 5, 5, -5, 5)
 3:0/0 = 0
 4:0/0 = 0
 5:0/0 = 0
-5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -5, 5, -5, 5, 5, -5, 5)
 6:0/0 = 0
-6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -5, 5, -5, 5, 5, -5, 5)
 7:0/0 = 0
-7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -5, 5, -5, 5, 5, -5, 5)
 8:0/0 = 0
-8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5, -5, 5, -5, 5, 5, -5, 5)
 9:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
@@ -114,4 +109,4 @@ texture_region_size = Vector2i(10, 10)
 [resource]
 tile_size = Vector2i(10, 10)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_enlwc")
+sources/0 = SubResource("TileSetAtlasSource_503ai")

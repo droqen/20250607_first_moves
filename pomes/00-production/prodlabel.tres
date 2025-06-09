@@ -1,0 +1,6 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cupoarvk31km6"]
+
+[ext_resource type="FontVariation" uid="uid://belrgyhj2bpcw" path="res://fonts/88_shortvariation.tres" id="1_0n75h"]
+
+[resource]
+font = ExtResource("1_0n75h")

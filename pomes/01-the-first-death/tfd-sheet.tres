@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Sheet" load_steps=3 format=3 uid="uid://dounovh5ap6ye"]
+
+[ext_resource type="Script" uid="uid://byun6mt7c4fun" path="res://navdi/navdisheet.gd" id="1_d82gk"]
+[ext_resource type="Texture2D" uid="uid://den48k7gyogiy" path="res://pomes/01-the-first-death/01-the-first-death.png" id="2_6b2uc"]
+
+[resource]
+script = ExtResource("1_d82gk")
+texture = ExtResource("2_6b2uc")
+hframes = 10
+vframes = 10
+defaultframe = 0
+metadata/_custom_type_script = "uid://byun6mt7c4fun"
