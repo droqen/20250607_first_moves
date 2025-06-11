@@ -86,14 +86,14 @@ parameters/looping = false
 
 [node name="bip_inner" type="AudioStreamPlayer" parent="sfxes"]
 stream = ExtResource("6_ytdtq")
-volume_db = -20.0
+volume_db = -28.829
 pitch_scale = 0.64
 bus = &"muffled_bus"
 
 [node name="bye_inner" type="AudioStreamPlayer" parent="sfxes"]
 stream = ExtResource("7_xaudv")
-volume_db = -31.283
-pitch_scale = 1.18
+volume_db = -46.001
+pitch_scale = 0.58
 bus = &"muffled_bus"
 
 [node name="bip_outer" type="AudioStreamPlayer" parent="sfxes"]
@@ -105,16 +105,16 @@ bus = &"voice_bus"
 [node name="bye_outer" type="AudioStreamPlayer" parent="sfxes"]
 stream = ExtResource("7_xaudv")
 volume_db = -45.698
-pitch_scale = 0.58
+pitch_scale = 1.18
 bus = &"voice_bus"
 
 [node name="bip_stranger" type="AudioStreamPlayer" parent="sfxes"]
 stream = ExtResource("6_ytdtq")
-volume_db = -10.0
+volume_db = -26.679
 bus = &"faraway_bus"
 
 [node name="bye_stranger" type="AudioStreamPlayer" parent="sfxes"]
 stream = ExtResource("7_xaudv")
-volume_db = -32.566
-pitch_scale = 2.0
+volume_db = -40.415
+pitch_scale = 1.77
 bus = &"faraway_bus"
