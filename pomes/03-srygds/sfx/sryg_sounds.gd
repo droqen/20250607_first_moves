@@ -17,12 +17,12 @@ func play_sound(soundname:String,override_if_playing:bool=true,opacity:float=1.0
 	if sfx == null:
 		push_warning("Unknown sound "+soundname)
 	elif override_if_playing or sfx.get_playback_position() > sfx.stream.get_length() * 0.5 or !sfx.playing:
-		if opacity >= 1:
-			sfx.volume_db = base_volumes.get(sfx, 0)
-		else:
-			sfx.volume_db = lerp(-40.0, base_volumes.get(sfx, 0), atten.sample_baked(opacity))
-		#if opacity >= 0.5:
-			#sfx.play()
+		#if opacity >= 1:
+			#sfx.volume_db = base_volumes.get(sfx, 0)
+		#else:
+			#sfx.volume_db = lerp(-40.0, base_volumes.get(sfx, 0), atten.sample_baked(opacity))
+		if opacity >= 0.5:
+			sfx.play()
 
 func set_track(track:int) -> void:
 	if track < 0 or track >= $bgms.get_child_count():

@@ -26,18 +26,15 @@ atten = SubResource("Curve_ytdtq")
 [node name="0 - ToneC" type="AudioStreamPlayer" parent="bgms"]
 stream = ExtResource("1_35w76")
 volume_db = -25.0
-playback_type = 1
 parameters/looping = true
 
 [node name="1 - ToneBE" type="AudioStreamPlayer" parent="bgms"]
 stream = ExtResource("3_xaudv")
 volume_db = -5.0
-playback_type = 1
 parameters/looping = true
 
 [node name="2 - ToneGC" type="AudioStreamPlayer" parent="bgms"]
 stream = ExtResource("4_kxgsh")
-playback_type = 1
 parameters/looping = true
 
 [node name="3 - ToneFB" type="AudioStreamPlayer" parent="bgms"]
@@ -55,31 +52,26 @@ parameters/looping = true
 [node name="6 - ToneC Very Muted" type="AudioStreamPlayer" parent="bgms"]
 stream = ExtResource("1_35w76")
 volume_db = -45.0
-playback_type = 1
 parameters/looping = true
 
 [node name="7 - ToneC Returning" type="AudioStreamPlayer" parent="bgms"]
 stream = ExtResource("1_35w76")
 volume_db = -35.0
-playback_type = 1
 parameters/looping = true
 
 [node name="8 - higher" type="AudioStreamPlayer" parent="bgms"]
 stream = ExtResource("8_6fkgn")
 volume_db = -35.0
-playback_type = 1
 parameters/looping = true
 
 [node name="9 - higher" type="AudioStreamPlayer" parent="bgms"]
 stream = ExtResource("9_nqgul")
 volume_db = -35.0
-playback_type = 1
 parameters/looping = true
 
 [node name="10 - highest" type="AudioStreamPlayer" parent="bgms"]
 stream = ExtResource("10_6fkgn")
 volume_db = -35.0
-playback_type = 1
 parameters/looping = false
 
 [node name="sfxes" type="Node" parent="."]
@@ -88,33 +80,27 @@ parameters/looping = false
 stream = ExtResource("6_ytdtq")
 volume_db = -28.829
 pitch_scale = 0.64
-bus = &"muffled_bus"
 
 [node name="bye_inner" type="AudioStreamPlayer" parent="sfxes"]
 stream = ExtResource("7_xaudv")
 volume_db = -46.001
 pitch_scale = 0.58
-bus = &"muffled_bus"
 
 [node name="bip_outer" type="AudioStreamPlayer" parent="sfxes"]
 stream = ExtResource("6_ytdtq")
 volume_db = -30.0
 pitch_scale = 1.3
-bus = &"voice_bus"
 
 [node name="bye_outer" type="AudioStreamPlayer" parent="sfxes"]
 stream = ExtResource("7_xaudv")
 volume_db = -45.698
 pitch_scale = 1.18
-bus = &"voice_bus"
 
 [node name="bip_stranger" type="AudioStreamPlayer" parent="sfxes"]
 stream = ExtResource("6_ytdtq")
 volume_db = -26.679
-bus = &"faraway_bus"
 
 [node name="bye_stranger" type="AudioStreamPlayer" parent="sfxes"]
 stream = ExtResource("7_xaudv")
 volume_db = -40.415
 pitch_scale = 1.77
-bus = &"faraway_bus"
