@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3bpl1tpj0siv"]
+
+[ext_resource type="Script" uid="uid://b6eco0b80an6l" path="res://pomes/03-srygds/sryplayer.gd" id="1_x15yj"]
+[ext_resource type="Texture2D" uid="uid://5al3afbp3pqf" path="res://pomes/03-srygds/srygds_.png" id="2_kvhhp"]
+[ext_resource type="Script" uid="uid://di2t14yakk4ot" path="res://navdi/navdisheetsprite.gd" id="3_mlqap"]
+[ext_resource type="Resource" uid="uid://ckh8sym6k0vix" path="res://pomes/03-srygds/srygds_sheet.tres" id="4_atn86"]
+[ext_resource type="Script" uid="uid://tt1ag5ksilr0" path="res://navdi/navdibodymover.gd" id="5_xbwbf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_47ij8"]
+size = Vector2(5.9, 7.9)
+
+[node name="sryplayer" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_x15yj")
+
+[node name="spr" type="Sprite2D" parent="."]
+texture = ExtResource("2_kvhhp")
+hframes = 10
+vframes = 10
+frame = 35
+script = ExtResource("3_mlqap")
+sheet = ExtResource("4_atn86")
+frames = PackedInt32Array(34, 35)
+ani_period = 29
+ani_index = 1
+metadata/_custom_type_script = "uid://di2t14yakk4ot"
+
+[node name="mover" type="Node2D" parent="."]
+position = Vector2(0, 1)
+script = ExtResource("5_xbwbf")
+metadata/_custom_type_script = "uid://tt1ag5ksilr0"
+
+[node name="cast" type="ShapeCast2D" parent="mover"]
+shape = SubResource("RectangleShape2D_47ij8")
+target_position = Vector2(0, 0)

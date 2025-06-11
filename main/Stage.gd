@@ -6,10 +6,12 @@ signal stage_cleared
 @export var height : int = 100
 @export var bordercol : Color = Color.BLACK
 @export var bgcol : Color = Color.WEB_GRAY
+@export var filter : TextureFilter = TEXTURE_FILTER_NEAREST
 func _draw() -> void:
 	if Engine.is_editor_hint():
 		draw_rect(Rect2(0,0,width,height), bordercol, false, 2.0)
 func _ready() -> void:
+	texture_filter = filter
 	if Engine.is_editor_hint():
 		ProjectSettings.set("rendering/environment/defaults/default_clear_color", bgcol)
 	else:

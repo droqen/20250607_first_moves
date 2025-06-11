@@ -10,6 +10,7 @@ func _physics_process(_delta: float) -> void:
 		camera.zoom = Vector2.ONE * pxscale
 		camera.position.x = stage.width/2
 		camera.position.y = stage.height/2
-		var size = viewportsize / pxscale
-		$full_grad_bg.position = camera.position - size * 0.5
-		$full_grad_bg.size = size
+		var size = viewportsize / pxscale + Vector2i(10,10)
+		$bg.position = camera.position - size * 0.5
+		$bg.size = size
+		$bg.color = stage.bgcol
