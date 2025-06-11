@@ -1,46 +1,45 @@
-[gd_scene load_steps=14 format=4 uid="uid://bjxcdvra8ewx3"]
+[gd_scene load_steps=13 format=4 uid="uid://bny00y1dl8v4y"]
 
-[ext_resource type="Script" uid="uid://dxgwuof2m1gvm" path="res://main/Stage.gd" id="1_8kqmx"]
-[ext_resource type="Script" uid="uid://di2t14yakk4ot" path="res://navdi/navdisheetsprite.gd" id="2_31g2j"]
-[ext_resource type="TileSet" uid="uid://do3jcdjxj3w8o" path="res://pomes/03-srygds/srygds_tiles.tres" id="2_qabcp"]
-[ext_resource type="Script" uid="uid://bqd058komyl30" path="res://navdi/maze.gd" id="3_3tjdf"]
-[ext_resource type="Texture2D" uid="uid://5al3afbp3pqf" path="res://pomes/03-srygds/srygds_.png" id="4_0f16r"]
-[ext_resource type="Resource" uid="uid://ckh8sym6k0vix" path="res://pomes/03-srygds/srygds_sheet.tres" id="5_0f16r"]
-[ext_resource type="LabelSettings" uid="uid://cupoarvk31km6" path="res://pomes/00-production/prodlabel.tres" id="7_epcmd"]
-[ext_resource type="PackedScene" uid="uid://d3bpl1tpj0siv" path="res://pomes/03-srygds/sryplayer.tscn" id="8_4h5y5"]
-[ext_resource type="FontVariation" uid="uid://dxacsefvd7ebq" path="res://fonts/44_shortvariation.tres" id="9_8ubst"]
-[ext_resource type="Script" uid="uid://bhre56wm3y8hg" path="res://pomes/03-srygds/playerfollow.gd" id="9_47ij8"]
-[ext_resource type="Script" uid="uid://dn6osursh7un1" path="res://pomes/03-srygds/playerspeak.gd" id="11_qut8d"]
-[ext_resource type="Script" uid="uid://dikge4isasdy1" path="res://pomes/03-srygds/sryg_music_key.gd" id="12_f51tg"]
+[ext_resource type="Script" uid="uid://dxgwuof2m1gvm" path="res://main/Stage.gd" id="1_xp3xs"]
+[ext_resource type="TileSet" uid="uid://do3jcdjxj3w8o" path="res://pomes/03-srygds/srygds_tiles.tres" id="2_1o1iq"]
+[ext_resource type="Script" uid="uid://bqd058komyl30" path="res://navdi/maze.gd" id="3_fjjg1"]
+[ext_resource type="Texture2D" uid="uid://5al3afbp3pqf" path="res://pomes/03-srygds/srygds_.png" id="4_ni6qw"]
+[ext_resource type="Script" uid="uid://di2t14yakk4ot" path="res://navdi/navdisheetsprite.gd" id="5_odyhg"]
+[ext_resource type="Resource" uid="uid://ckh8sym6k0vix" path="res://pomes/03-srygds/srygds_sheet.tres" id="6_gkmxj"]
+[ext_resource type="LabelSettings" uid="uid://cupoarvk31km6" path="res://pomes/00-production/prodlabel.tres" id="7_r0a1w"]
+[ext_resource type="PackedScene" uid="uid://d3bpl1tpj0siv" path="res://pomes/03-srygds/sryplayer.tscn" id="8_vokw6"]
+[ext_resource type="Script" uid="uid://bhre56wm3y8hg" path="res://pomes/03-srygds/playerfollow.gd" id="9_ec6bu"]
+[ext_resource type="FontVariation" uid="uid://dxacsefvd7ebq" path="res://fonts/44_shortvariation.tres" id="10_qnkfq"]
+[ext_resource type="Script" uid="uid://dn6osursh7un1" path="res://pomes/03-srygds/playerspeak.gd" id="11_vpigc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_47ij8"]
-font = ExtResource("9_8ubst")
+font = ExtResource("10_qnkfq")
 
-[node name="SrygdsStart" type="Node2D"]
+[node name="SrygdsReturn2" type="Node2D"]
 texture_filter = 1
-script = ExtResource("1_8kqmx")
+script = ExtResource("1_xp3xs")
 width = 320
 height = 280
 bgcol = Color(0.788235, 0.952941, 0.254902, 1)
-stage_left = "uid://c6aq47nkv5ct2"
-stage_down = "uid://cj0qwbhfe45iq"
+stage_left = "uid://bbto41kvdd3j4"
+stage_right = "res://pomes/03-srygds/srygds_return3.tscn"
 metadata/_custom_type_script = "uid://dxgwuof2m1gvm"
 
 [node name="Maze" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAAABUAAAADAAgAAAABABUAAAADAAgAAAACABUAAAADAAgAAAADABUAAAADAAgAAAAEABUAAAADAAgAAAAFABUAAAADAAgAAAAGABUAAAADAAgAAAAHABUAAAADAAgAAAAIABUAAAADAAgAAAAJABUAAAADAAgAAAAKABUAAAADAAgAAAALABUAAAADAAgAAAAMABUAAAADAAgAAAANABUAAAADAAgAAAAOABUAAAADAAgAAAAPABUAAAADAAgAAAAQABUAAAAEAAcAAAARABUAAAAEAAcAAAAVABUAAAADAAgAAAAWABUAAAADAAgAAAAXABUAAAADAAgAAAAYABUAAAADAAgAAAAZABUAAAADAAgAAAAaABUAAAADAAgAAAAbABUAAAADAAgAAAAcABUAAAADAAgAAAAdABUAAAADAAgAAAAeABUAAAADAAgAAAAfABUAAAADAAgAAAAVABMAAAAEAAcAAAAWABMAAAAEAAcAAAAXABMAAAAEAAcAAAAYABMAAAAEAAgAAAAZABIAAAAEAAgAAAAaABIAAAAEAAgAAAAaABEAAAAEAAcAAAAbABAAAAAEAAcAAAAcAA8AAAAEAAcAAAAcAA4AAAAEAAcAAAAbAA4AAAAEAAcAAAAaAA8AAAAEAAYAAAAZABAAAAAEAAgAAAAYABEAAAAEAAcAAAAYABIAAAAEAAcAAAAbABEAAAAEAAcAAAAZABMAAAAEAAgAAAAaABAAAAAEAAcAAAAZABEAAAAEAAcAAAAbAA8AAAAEAAcAAAAPABQAAAAEAAcAAAAQABQAAAAEAAcAAAARABQAAAAEAAgAAAARABMAAAAEAAcAAAASABMAAAAEAAgAAAATABMAAAAEAAgAAAATABIAAAAEAAcAAAATABEAAAAEAAYAAAASABEAAAAEAAcAAAASABIAAAAEAAgAAAARABIAAAAEAAcAAAASABQAAAAEAAgAAAAUABIAAAAEAAgAAAAUABEAAAAEAAYAAAATABQAAAAEAAgAAAAUABQAAAAEAAgAAAAVABQAAAAEAAgAAAAUABMAAAAEAAcAAAAWABQAAAAEAAgAAAAaABMAAAAEAAgAAAAbABMAAAAEAAgAAAAZABQAAAAEAAgAAAAYABQAAAAEAAgAAAAaABQAAAAEAAgAAAAbABQAAAAEAAgAAAAcABQAAAAEAAgAAAAdABMAAAAEAAcAAAAcABMAAAAEAAgAAAAXABQAAAAEAAgAAAAeABIAAAAEAAcAAAAdABIAAAAEAAcAAAAdABEAAAAEAAcAAAAcABEAAAAEAAgAAAAbABIAAAAEAAcAAAAeABMAAAAEAAcAAAAcABIAAAAEAAgAAAAfABMAAAAEAAcAAAAeABEAAAAEAAcAAAAfABIAAAAEAAcAAAAfABEAAAAEAAcAAAAdABQAAAAEAAcAAAAeABQAAAAEAAcAAAAfABQAAAAEAAcAAAAfABAAAAAEAAYAAAAeABAAAAAEAAcAAAAdABAAAAAEAAgAAAANABQAAAACAAcAAAANABMAAAACAAcAAAANABIAAAACAAcAAAANABEAAAACAAcAAAANABAAAAACAAcAAAANAA8AAAACAAcAAAAOAA8AAAACAAcAAAAOABAAAAACAAcAAAAOABEAAAACAAcAAAAOABIAAAACAAcAAAAOABMAAAACAAcAAAAPABMAAAACAAcAAAAPABIAAAACAAcAAAAPABEAAAACAAcAAAAQABEAAAACAAcAAAAQABAAAAACAAcAAAAQAA8AAAACAAcAAAAPAA8AAAACAAcAAAAPABAAAAACAAcAAAAOABQAAAACAAcAAAAPAA0AAAACAAcAAAAOAA0AAAACAAcAAAAOAAwAAAACAAcAAAAOAAsAAAACAAcAAAANAAsAAAACAAcAAAAOAA4AAAACAAcAAAAPAA4AAAACAAcAAAAPAAwAAAACAAcAAAAMABQAAAABAAcAAAAMABMAAAABAAcAAAAMABIAAAABAAcAAAAMABEAAAABAAcAAAAKABMAAAACAAcAAAAKABQAAAACAAcAAAAJABIAAAACAAcAAAAJABMAAAACAAcAAAAJABQAAAACAAcAAAALABMAAAACAAcAAAALABIAAAACAAcAAAALABQAAAACAAcAAAAIABQAAAACAAcAAAAHABQAAAACAAcAAAAGABQAAAACAAcAAAAcABYAAAADAAgAAAAdABYAAAADAAgAAAAeABYAAAADAAgAAAAfABYAAAADAAgAAAAUABUAAAADAAgAAAATABUAAAADAAgAAAASABUAAAAEAAgAAAARAA8AAAADAAkAAAASAA8AAAADAAkAAAATAA8AAAADAAkAAAAUAA8AAAADAAkAAAAVAA8AAAADAAkAAAAWAA8AAAADAAkAAAAXAA8AAAADAAkAAAA=")
-tile_set = ExtResource("2_qabcp")
+tile_set = ExtResource("2_1o1iq")
 navigation_enabled = false
-script = ExtResource("3_3tjdf")
+script = ExtResource("3_fjjg1")
 metadata/_custom_type_script = "uid://bqd058komyl30"
 
 [node name="waver" type="Sprite2D" parent="."]
 position = Vector2(125, 165)
-texture = ExtResource("4_0f16r")
+texture = ExtResource("4_ni6qw")
 hframes = 10
 vframes = 10
 frame = 61
-script = ExtResource("2_31g2j")
-sheet = ExtResource("5_0f16r")
+script = ExtResource("5_odyhg")
+sheet = ExtResource("6_gkmxj")
 frames = PackedInt32Array(61, 62, 63)
 metadata/_custom_type_script = "uid://di2t14yakk4ot"
 
@@ -52,15 +51,15 @@ offset_bottom = 33.0
 text = "the first love is not
 love, but an opening,
 a magic door, a Key."
-label_settings = ExtResource("7_epcmd")
+label_settings = ExtResource("7_r0a1w")
 
-[node name="sryplayer" parent="." instance=ExtResource("8_4h5y5")]
+[node name="sryplayer" parent="." instance=ExtResource("8_vokw6")]
 position = Vector2(17, 205)
 
 [node name="playerfollow" type="Node2D" parent="."]
 position = Vector2(31, 75)
-script = ExtResource("9_47ij8")
-front_thoughts = Array[String](["i should go to the right", "what if i go left?", "the red ribbon, twirling", "the mountain"])
+script = ExtResource("9_ec6bu")
+front_thoughts = Array[String](["ribbon, red", "self, light blue", "crescent, yellow", "the mountain, dark blue", "a sky, green", "a sky, chartreuse", "words, black", "love, love"])
 
 [node name="backthoughts" type="Label" parent="playerfollow"]
 modulate = Color(0.0784314, 0.152941, 0.505882, 1)
@@ -74,9 +73,5 @@ something?"
 label_settings = SubResource("LabelSettings_47ij8")
 autowrap_mode = 2
 visible_characters_behavior = 1
-script = ExtResource("11_qut8d")
-messages = Array[String](["where am i going? why", "am i doing what i'm meant to be doing", "can i go down?", "can i try that again?", "can i go up?"])
-
-[node name="SrygMusicKey" type="Node" parent="."]
-script = ExtResource("12_f51tg")
-track = 0
+script = ExtResource("11_vpigc")
+messages = Array[String](["wandering", "purposeless", "directions", "lost", "satisfaction", "ascent"])

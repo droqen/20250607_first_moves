@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://qly88p7vvufd"]
+
+[ext_resource type="Script" uid="uid://dxgwuof2m1gvm" path="res://main/Stage.gd" id="1_obua3"]
+[ext_resource type="TileSet" uid="uid://do3jcdjxj3w8o" path="res://pomes/03-srygds/srygds_tiles.tres" id="2_ni3b5"]
+[ext_resource type="Script" uid="uid://bqd058komyl30" path="res://navdi/maze.gd" id="3_iamgx"]
+[ext_resource type="LabelSettings" uid="uid://cupoarvk31km6" path="res://pomes/00-production/prodlabel.tres" id="4_h6d75"]
+[ext_resource type="Script" uid="uid://05e4o0rqkey8" path="res://pomes/03-srygds/erase_the_player.gd" id="5_rrtau"]
+[ext_resource type="Script" uid="uid://dikge4isasdy1" path="res://pomes/03-srygds/sryg_music_key.gd" id="6_pjcek"]
+
+[node name="ending" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_obua3")
+width = 320
+height = 280
+bgcol = Color(0.788235, 0.952941, 0.254902, 1)
+stage_left = "uid://dm1qgcu3jaxd"
+no_stage_up_allowed = true
+metadata/_custom_type_script = "uid://dxgwuof2m1gvm"
+
+[node name="Maze" type="TileMapLayer" parent="."]
+tile_set = ExtResource("2_ni3b5")
+navigation_enabled = false
+script = ExtResource("3_iamgx")
+metadata/_custom_type_script = "uid://bqd058komyl30"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_top = 10.0
+offset_right = 40.0
+offset_bottom = 33.0
+text = "end of poem."
+label_settings = ExtResource("4_h6d75")
+
+[node name="erase_the_player" type="Node" parent="."]
+script = ExtResource("5_rrtau")
+
+[node name="SrygMusicKey" type="Node" parent="."]
+script = ExtResource("6_pjcek")
+track = 10

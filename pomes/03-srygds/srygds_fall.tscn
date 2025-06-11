@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://cj0qwbhfe45iq"]
+
+[ext_resource type="Script" uid="uid://dxgwuof2m1gvm" path="res://main/Stage.gd" id="1_1v4na"]
+[ext_resource type="TileSet" uid="uid://do3jcdjxj3w8o" path="res://pomes/03-srygds/srygds_tiles.tres" id="2_gwtu4"]
+[ext_resource type="Script" uid="uid://bqd058komyl30" path="res://navdi/maze.gd" id="3_n2013"]
+[ext_resource type="LabelSettings" uid="uid://cupoarvk31km6" path="res://pomes/00-production/prodlabel.tres" id="4_jb3m0"]
+[ext_resource type="PackedScene" uid="uid://d3bpl1tpj0siv" path="res://pomes/03-srygds/sryplayer.tscn" id="5_fjyd6"]
+[ext_resource type="FontVariation" uid="uid://dxacsefvd7ebq" path="res://fonts/44_shortvariation.tres" id="6_bq3kw"]
+[ext_resource type="Script" uid="uid://dn6osursh7un1" path="res://pomes/03-srygds/playerspeak.gd" id="7_tugoh"]
+[ext_resource type="Script" uid="uid://bhre56wm3y8hg" path="res://pomes/03-srygds/playerfollow.gd" id="8_catac"]
+[ext_resource type="Script" uid="uid://dikge4isasdy1" path="res://pomes/03-srygds/sryg_music_key.gd" id="9_bh462"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_47ij8"]
+font = ExtResource("6_bq3kw")
+
+[node name="SrygdsFall" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_1v4na")
+width = 320
+height = 280
+bgcol = Color(0.423716, 0.61358, 0.529958, 1)
+stage_up = "uid://bjxcdvra8ewx3"
+stage_down = "uid://bxhy02lctbm0x"
+metadata/_custom_type_script = "uid://dxgwuof2m1gvm"
+
+[node name="Maze" type="TileMapLayer" parent="."]
+tile_set = ExtResource("2_gwtu4")
+navigation_enabled = false
+script = ExtResource("3_n2013")
+metadata/_custom_type_script = "uid://bqd058komyl30"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_top = 10.0
+offset_right = 40.0
+offset_bottom = 33.0
+text = "the first love is not
+love, but an opening,
+a magic door, a Key."
+label_settings = ExtResource("4_jb3m0")
+
+[node name="sryplayer" parent="." instance=ExtResource("5_fjyd6")]
+position = Vector2(17, 205)
+
+[node name="playerfollow" type="Node2D" parent="."]
+position = Vector2(31, 75)
+script = ExtResource("8_catac")
+front_thoughts = Array[String](["down", "down, down, down", "down, down, down, down, down"])
+
+[node name="backthoughts" type="Label" parent="playerfollow"]
+modulate = Color(0.0784314, 0.152941, 0.505882, 1)
+offset_left = -24.0
+offset_top = -19.0
+offset_right = 31.0
+offset_bottom = 4.0
+text = "oh, could i
+have said
+something?"
+label_settings = SubResource("LabelSettings_47ij8")
+autowrap_mode = 2
+visible_characters_behavior = 1
+script = ExtResource("7_tugoh")
+messages = Array[String](["down", "down, down, down", "down, down, down, down, down"])
+
+[node name="SrygMusicKey" type="Node" parent="."]
+script = ExtResource("9_bh462")
+track = 1

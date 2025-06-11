@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b7lv2clgprlx4"]
+[gd_scene load_steps=8 format=3 uid="uid://b7lv2clgprlx4"]
 
 [ext_resource type="Script" uid="uid://co3kmtah73sbt" path="res://main/main.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://x5jwb6h1gbyg" path="res://pomes/03-srygds/_play_srygds.gd" id="3_1bvp3"]
 [ext_resource type="Shader" uid="uid://dbjyeg50xlel8" path="res://test.gdshader" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://bqd12gmhj3udk" path="res://pomes/03-srygds/sfx/SrygSounds.tscn" id="5_7mycd"]
 [ext_resource type="Script" uid="uid://d1kgt6ogtpocl" path="res://navdi/navdisoleplayerholder.gd" id="5_lquwl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lquwl"]
@@ -48,3 +49,5 @@ script = ExtResource("3_1bvp3")
 [node name="NavdiSolePlayerHolder" type="Node2D" parent="."]
 script = ExtResource("5_lquwl")
 metadata/_custom_type_script = "uid://d1kgt6ogtpocl"
+
+[node name="SrygSounds" parent="." instance=ExtResource("5_7mycd")]

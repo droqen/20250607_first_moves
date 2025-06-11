@@ -1,0 +1,120 @@
+[gd_scene load_steps=14 format=3 uid="uid://bqd12gmhj3udk"]
+
+[ext_resource type="AudioStream" uid="uid://bbtbp616x2lg7" path="res://pomes/03-srygds/sfx/tone_c.mp3" id="1_35w76"]
+[ext_resource type="Script" uid="uid://bgamvdrm37bp" path="res://pomes/03-srygds/sfx/sryg_sounds.gd" id="1_v0t5k"]
+[ext_resource type="AudioStream" uid="uid://bbuahf6utkql7" path="res://pomes/03-srygds/sfx/tone2.mp3" id="3_xaudv"]
+[ext_resource type="AudioStream" uid="uid://cbvaat0gp5sey" path="res://pomes/03-srygds/sfx/tone3_long.mp3" id="4_kxgsh"]
+[ext_resource type="AudioStream" uid="uid://dygeog5puoe7k" path="res://pomes/03-srygds/sfx/tone_FB.mp3" id="4_xaudv"]
+[ext_resource type="AudioStream" uid="uid://c6lxccj2abg0m" path="res://pomes/03-srygds/sfx/tone_bottom.mp3" id="6_7ma8o"]
+[ext_resource type="AudioStream" uid="uid://dqnrhrmb8xljt" path="res://pomes/03-srygds/sfx/bipType.wav" id="6_ytdtq"]
+[ext_resource type="AudioStream" uid="uid://cq2ohb07efq3a" path="res://pomes/03-srygds/sfx/tone_bottompit.mp3" id="7_108oe"]
+[ext_resource type="AudioStream" uid="uid://bf5vghyrahpks" path="res://pomes/03-srygds/sfx/bipBye.wav" id="7_xaudv"]
+[ext_resource type="AudioStream" uid="uid://dr4llv6yabl0q" path="res://pomes/03-srygds/sfx/tone_Dhigh.mp3" id="8_6fkgn"]
+[ext_resource type="AudioStream" uid="uid://ckwf5o6j3sobh" path="res://pomes/03-srygds/sfx/tone_Ehigh.mp3" id="9_nqgul"]
+[ext_resource type="AudioStream" uid="uid://1tulmsrwbgqr" path="res://pomes/03-srygds/sfx/tone_ending_fadeout_long.mp3" id="10_6fkgn"]
+
+[sub_resource type="Curve" id="Curve_ytdtq"]
+_data = [Vector2(0, 0), 0.0, 2.79194, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="SrygSounds" type="Node"]
+script = ExtResource("1_v0t5k")
+atten = SubResource("Curve_ytdtq")
+
+[node name="bgms" type="Node" parent="."]
+
+[node name="0 - ToneC" type="AudioStreamPlayer" parent="bgms"]
+stream = ExtResource("1_35w76")
+volume_db = -25.0
+playback_type = 1
+parameters/looping = true
+
+[node name="1 - ToneBE" type="AudioStreamPlayer" parent="bgms"]
+stream = ExtResource("3_xaudv")
+volume_db = -5.0
+playback_type = 1
+parameters/looping = true
+
+[node name="2 - ToneGC" type="AudioStreamPlayer" parent="bgms"]
+stream = ExtResource("4_kxgsh")
+playback_type = 1
+parameters/looping = true
+
+[node name="3 - ToneFB" type="AudioStreamPlayer" parent="bgms"]
+stream = ExtResource("4_xaudv")
+parameters/looping = true
+
+[node name="4 - ToneBottom" type="AudioStreamPlayer" parent="bgms"]
+stream = ExtResource("6_7ma8o")
+parameters/looping = true
+
+[node name="5 - ToneBottompit" type="AudioStreamPlayer" parent="bgms"]
+stream = ExtResource("7_108oe")
+parameters/looping = true
+
+[node name="6 - ToneC Very Muted" type="AudioStreamPlayer" parent="bgms"]
+stream = ExtResource("1_35w76")
+volume_db = -45.0
+playback_type = 1
+parameters/looping = true
+
+[node name="7 - ToneC Returning" type="AudioStreamPlayer" parent="bgms"]
+stream = ExtResource("1_35w76")
+volume_db = -35.0
+playback_type = 1
+parameters/looping = true
+
+[node name="8 - higher" type="AudioStreamPlayer" parent="bgms"]
+stream = ExtResource("8_6fkgn")
+volume_db = -35.0
+playback_type = 1
+parameters/looping = true
+
+[node name="9 - higher" type="AudioStreamPlayer" parent="bgms"]
+stream = ExtResource("9_nqgul")
+volume_db = -35.0
+playback_type = 1
+parameters/looping = true
+
+[node name="10 - highest" type="AudioStreamPlayer" parent="bgms"]
+stream = ExtResource("10_6fkgn")
+volume_db = -35.0
+playback_type = 1
+parameters/looping = false
+
+[node name="sfxes" type="Node" parent="."]
+
+[node name="bip_inner" type="AudioStreamPlayer" parent="sfxes"]
+stream = ExtResource("6_ytdtq")
+volume_db = -20.0
+pitch_scale = 0.64
+bus = &"muffled_bus"
+
+[node name="bye_inner" type="AudioStreamPlayer" parent="sfxes"]
+stream = ExtResource("7_xaudv")
+volume_db = -31.283
+pitch_scale = 1.18
+bus = &"muffled_bus"
+
+[node name="bip_outer" type="AudioStreamPlayer" parent="sfxes"]
+stream = ExtResource("6_ytdtq")
+volume_db = -30.0
+pitch_scale = 1.3
+bus = &"voice_bus"
+
+[node name="bye_outer" type="AudioStreamPlayer" parent="sfxes"]
+stream = ExtResource("7_xaudv")
+volume_db = -45.698
+pitch_scale = 0.58
+bus = &"voice_bus"
+
+[node name="bip_stranger" type="AudioStreamPlayer" parent="sfxes"]
+stream = ExtResource("6_ytdtq")
+volume_db = -10.0
+bus = &"faraway_bus"
+
+[node name="bye_stranger" type="AudioStreamPlayer" parent="sfxes"]
+stream = ExtResource("7_xaudv")
+volume_db = -32.566
+pitch_scale = 2.0
+bus = &"faraway_bus"

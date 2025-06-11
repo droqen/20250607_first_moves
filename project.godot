@@ -70,4 +70,4 @@ jump={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.501961, 0.501961, 0.501961, 1)
+environment/defaults/default_clear_color=Color(0.788235, 0.952941, 0.254902, 1)

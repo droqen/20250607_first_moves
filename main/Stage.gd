@@ -7,6 +7,13 @@ signal stage_cleared
 @export var bordercol : Color = Color.BLACK
 @export var bgcol : Color = Color.WEB_GRAY
 @export var filter : TextureFilter = TEXTURE_FILTER_NEAREST
+
+@export_file("*.tscn") var stage_left: String
+@export_file("*.tscn") var stage_right: String
+@export_file("*.tscn") var stage_up: String
+@export_file("*.tscn") var stage_down: String
+@export var no_stage_up_allowed : bool = false
+
 func _draw() -> void:
 	if Engine.is_editor_hint():
 		draw_rect(Rect2(0,0,width,height), bordercol, false, 2.0)

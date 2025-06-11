@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=4 uid="uid://cfld8fhcr3l4r"]
+
+[ext_resource type="Script" uid="uid://dxgwuof2m1gvm" path="res://main/Stage.gd" id="1_nfk65"]
+[ext_resource type="TileSet" uid="uid://do3jcdjxj3w8o" path="res://pomes/03-srygds/srygds_tiles.tres" id="2_oyodx"]
+[ext_resource type="Script" uid="uid://bqd058komyl30" path="res://navdi/maze.gd" id="3_4hm3f"]
+[ext_resource type="LabelSettings" uid="uid://cupoarvk31km6" path="res://pomes/00-production/prodlabel.tres" id="4_ta6pn"]
+[ext_resource type="PackedScene" uid="uid://d3bpl1tpj0siv" path="res://pomes/03-srygds/sryplayer.tscn" id="5_kfa46"]
+[ext_resource type="Script" uid="uid://bhre56wm3y8hg" path="res://pomes/03-srygds/playerfollow.gd" id="6_sxbmf"]
+[ext_resource type="FontVariation" uid="uid://dxacsefvd7ebq" path="res://fonts/44_shortvariation.tres" id="7_wnelm"]
+[ext_resource type="Script" uid="uid://dn6osursh7un1" path="res://pomes/03-srygds/playerspeak.gd" id="8_mvjy2"]
+[ext_resource type="Script" uid="uid://dikge4isasdy1" path="res://pomes/03-srygds/sryg_music_key.gd" id="9_oyodx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_47ij8"]
+font = ExtResource("7_wnelm")
+
+[node name="RedLevel" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_nfk65")
+width = 320
+height = 280
+bgcol = Color(0, 0, 0, 1)
+stage_up = "uid://b0twqod7rvvcl"
+metadata/_custom_type_script = "uid://dxgwuof2m1gvm"
+
+[node name="Maze" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAAHAAIAAAAAAAEAAAAHAAIAAAAAAAIAAAAHAAIAAAAAAAMAAAAHAAIAAAAAAAQAAAAHAAIAAAABAAAAAAAHAAIAAAABAAEAAAAHAAIAAAABAAIAAAAHAAIAAAABAAMAAAAHAAIAAAABAAQAAAAHAAIAAAACAAAAAAAHAAIAAAACAAEAAAAHAAIAAAACAAIAAAAHAAIAAAACAAMAAAAHAAIAAAACAAQAAAAHAAIAAAADAAIAAAAHAAIAAAADAAMAAAAHAAIAAAADAAQAAAAHAAIAAAAEAAMAAAAHAAIAAAAEAAQAAAAHAAIAAAAFAAMAAAAHAAIAAAAFAAQAAAAHAAIAAAANAAEAAAAHAAIAAAAOAAEAAAAHAAIAAAAPAAEAAAAHAAIAAAAPAAMAAAAHAAIAAAAQAAEAAAAHAAIAAAAQAAIAAAAHAAIAAAAQAAMAAAAHAAIAAAARAAEAAAAHAAIAAAARAAIAAAAHAAIAAAARAAMAAAAHAAIAAAASAAAAAAAHAAIAAAASAAEAAAAHAAIAAAASAAIAAAAHAAIAAAASAAMAAAAHAAIAAAASAAQAAAAHAAIAAAATAAAAAAAHAAIAAAATAAEAAAAHAAIAAAATAAIAAAAHAAIAAAATAAMAAAAHAAIAAAATAAQAAAAHAAIAAAAUAAAAAAAHAAIAAAAUAAEAAAAHAAIAAAAUAAIAAAAHAAIAAAAUAAMAAAAHAAIAAAAUAAQAAAAHAAIAAAAVAAAAAAAHAAIAAAAVAAEAAAAHAAIAAAAVAAIAAAAHAAIAAAAVAAMAAAAHAAIAAAAVAAQAAAAHAAIAAAAWAAAAAAAHAAIAAAAWAAEAAAAHAAIAAAAWAAIAAAAHAAIAAAAWAAMAAAAHAAIAAAAWAAQAAAAHAAIAAAAXAAAAAAAHAAIAAAAXAAEAAAAHAAIAAAAXAAIAAAAHAAIAAAAXAAMAAAAHAAIAAAAXAAQAAAAHAAIAAAAYAAAAAAAHAAIAAAAYAAEAAAAHAAIAAAAYAAIAAAAHAAIAAAAYAAMAAAAHAAIAAAAYAAQAAAAHAAIAAAAZAAAAAAAHAAIAAAAZAAEAAAAHAAIAAAAZAAIAAAAHAAIAAAAZAAMAAAAHAAIAAAAZAAQAAAAHAAIAAAAaAAAAAAAHAAIAAAAaAAEAAAAHAAIAAAAaAAIAAAAHAAIAAAAaAAMAAAAHAAIAAAAaAAQAAAAHAAIAAAAbAAAAAAAHAAIAAAAbAAEAAAAHAAIAAAAbAAIAAAAHAAIAAAAbAAMAAAAHAAIAAAAbAAQAAAAHAAIAAAAcAAAAAAAHAAIAAAAcAAEAAAAHAAIAAAAcAAIAAAAHAAIAAAAcAAMAAAAHAAIAAAAcAAQAAAAHAAIAAAAdAAAAAAAHAAIAAAAdAAEAAAAHAAIAAAAdAAIAAAAHAAIAAAAdAAMAAAAHAAIAAAAdAAQAAAAHAAIAAAAeAAAAAAAHAAIAAAAeAAEAAAAHAAIAAAAeAAIAAAAHAAIAAAAeAAMAAAAHAAIAAAAeAAQAAAAHAAIAAAAfAAAAAAAHAAIAAAAfAAEAAAAHAAIAAAAfAAIAAAAHAAIAAAAfAAMAAAAHAAIAAAAfAAQAAAAHAAIAAAANAAAAAAAHAAIAAAAOAAAAAAAHAAIAAAAPAAAAAAAHAAIAAAAQAAAAAAAHAAIAAAARAAAAAAAHAAIAAAANAAIAAAAHAAIAAAANAAMAAAAHAAIAAAANAAQAAAAHAAIAAAAOAAIAAAAHAAIAAAAOAAMAAAAHAAIAAAAOAAQAAAAHAAIAAAAPAAIAAAAHAAIAAAAPAAQAAAAHAAIAAAAQAAQAAAAHAAIAAAARAAQAAAAHAAIAAAAGAAQAAAAHAAIAAAAHAAQAAAAHAAIAAAAIAAQAAAAHAAIAAAAJAAQAAAAHAAIAAAAKAAQAAAAHAAIAAAALAAQAAAAHAAIAAAAMAAQAAAAHAAIAAAAMAAMAAAAHAAIAAAA=")
+tile_set = ExtResource("2_oyodx")
+navigation_enabled = false
+script = ExtResource("3_4hm3f")
+metadata/_custom_type_script = "uid://bqd058komyl30"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 61.0
+offset_top = 10.0
+offset_right = 131.0
+offset_bottom = 33.0
+text = "wanting
+numbers
+knowing
+
+it was
+you,
+right?
+    all
+  along
+falling
+and
+telling
+me what
+needed
+to be
+done."
+label_settings = ExtResource("4_ta6pn")
+
+[node name="sryplayer" parent="." instance=ExtResource("5_kfa46")]
+position = Vector2(17, 205)
+
+[node name="playerfollow" type="Node2D" parent="."]
+position = Vector2(31, 75)
+script = ExtResource("6_sxbmf")
+front_thoughts = Array[String](["74", "82505", "[x]", "yes", "right", "correct", "x=15.5", "syntax"])
+
+[node name="backthoughts" type="Label" parent="playerfollow"]
+modulate = Color(0.0784314, 0.152941, 0.505882, 1)
+offset_left = -24.0
+offset_top = -19.0
+offset_right = 31.0
+offset_bottom = 4.0
+text = "oh, could i
+have said
+something?"
+label_settings = SubResource("LabelSettings_47ij8")
+autowrap_mode = 2
+visible_characters_behavior = 1
+script = ExtResource("8_mvjy2")
+messages = Array[String](["what is the answer?", "what is my name?", "what's the right choice?", "which way is fastest?", "how do i make the number right?"])
+
+[node name="SrygMusicKey" type="Node" parent="."]
+script = ExtResource("9_oyodx")
