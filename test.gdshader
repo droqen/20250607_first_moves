@@ -49,7 +49,7 @@ void fragment() {
             total_weight += weight;
 		}
 	}
-	
+
     for (int x = -max3_radius; x <= max3_radius; x++) {
         for (int y = -max3_radius; y <= max3_radius; y++) {
             vec2 offset = vec2(float(x), float(y)) * resolution;

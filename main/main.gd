@@ -9,6 +9,7 @@ var camera_offset : Vector2 :
 		camera.position += change
 		_camera_offset += change
 		$bg.position = camera.position - $bg.size * 0.5
+var _lastknownviewportsize
 func _physics_process(_delta: float) -> void:
 	if stage_container.get_child_count() > 0:
 		var stage : Stage = stage_container.get_child(0)
@@ -22,3 +23,17 @@ func _physics_process(_delta: float) -> void:
 		$bg.position = camera.position - size * 0.5
 		$bg.size = size
 		$bg.color = lerp($bg.color,stage.bgcol,stage.modulate.a)
+		
+		if _lastknownviewportsize != viewportsize:
+			_lastknownviewportsize = viewportsize
+			if viewportsize.length() > 1500:
+				print(viewportsize.length())
+				(material as ShaderMaterial).set_shader_parameter("blur_radius", 4)
+				(material as ShaderMaterial).set_shader_parameter("max1_radius", 2)
+				(material as ShaderMaterial).set_shader_parameter("max2_radius", 4)
+				(material as ShaderMaterial).set_shader_parameter("max3_radius", 6)
+			else:
+				(material as ShaderMaterial).set_shader_parameter("blur_radius", 2)
+				(material as ShaderMaterial).set_shader_parameter("max1_radius", 1)
+				(material as ShaderMaterial).set_shader_parameter("max2_radius", 2)
+				(material as ShaderMaterial).set_shader_parameter("max3_radius", 3)
